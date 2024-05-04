@@ -3,7 +3,10 @@ php artisan serve
 
 # install and run vite
 npm install
-npm run dev
+npm run dev  # this run vite server too
+
+# build (copy assets (css, js,...) to public/build folder)
+npm run build
 
 # most used dir
 app - cpntrollers, models
@@ -44,4 +47,5 @@ php artisan make: view note.index
 
 # in controller
 $notes = Note: : query() -> orderBy('created_at', 'desc') -> get()
+$notes = Note:: query() -> orderBy('created_at', 'desc') -> paginate()
 dd($notes)  # output array and stop execution
